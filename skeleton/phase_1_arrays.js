@@ -27,6 +27,19 @@
     return outputArr
  }
 
- arr = [1, 2, 3, -1, -3, -2, 10, 0, 0]
+ Array.prototype.transpose = function() {
+    let output = []
 
- console.log(arr.twosum())
+    for (let i = 0; i < this.length; i++) { 
+        let subArray = []
+
+
+        for (let j =0; j < this.length; j++) {
+            subArray.push(this[j][i])
+        }
+
+        output.push(subArray)
+    }
+    return output
+ }
+
