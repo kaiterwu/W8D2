@@ -38,3 +38,14 @@ const exponent2 = (b,n) => {
     return (exponent(b,(n-1)/2)**2)*b
   }
 }
+
+function fib(n) {
+  if (n === 0) {
+    return [0]
+  } else if (n === 1) {
+    return [0, 1]
+  }
+
+  let meme = fib(n - 1)
+  return meme.concat(meme[meme.length - 1] + meme[meme.length - 2])
+}
