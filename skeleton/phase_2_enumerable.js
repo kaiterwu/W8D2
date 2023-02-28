@@ -26,3 +26,24 @@ Array.prototype.myMap = function(callback) {
     return output
 }
 
+const sum =(acc,el) => {
+    return acc + el 
+}
+
+const multi = (acc,el) =>{
+    return acc * el
+}
+
+Array.prototype.myReduce = function(callback,acc) {
+
+ 
+    if (acc === undefined) {
+        acc =this.shift()
+    }
+
+    this.myEach(function(el){
+        acc = callback(acc,el)
+
+    })
+    return acc
+}
