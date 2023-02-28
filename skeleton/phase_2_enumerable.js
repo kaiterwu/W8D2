@@ -25,3 +25,4 @@ Array.prototype.myMap = function(callback) {
 
     return output
 }
+
