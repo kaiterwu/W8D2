@@ -15,10 +15,18 @@ Array.prototype.bubbleSort = function() {
   return this
 }
 
-arr = [1, 5, 6, 3, 4, 2, 0]
+String.prototype.substrings = function() {
 
-console.log(arr.bubbleSort())
+  outputArray = []
 
-arr[1], arr[2] = arr[2], arr[1]
+  for (let i = 0; i < this.length; i++) {
+    for (let j = i+1; j<=this.length; j++) {
+      outputArray.push(this.slice(i,j))
+    }
+  }
+  return outputArray
+}
+
+
 
 // console.log(arr)
